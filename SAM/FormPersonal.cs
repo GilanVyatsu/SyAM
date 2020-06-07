@@ -66,7 +66,7 @@ namespace SAM
                 if (listViewPersonal.SelectedItems.Count == 1)
                 {
                     Personal personal = listViewPersonal.SelectedItems[0].Tag as Personal;
-                    Program.sAM.ClientSet.Remove(personal);
+                    Program.sAM.Personal.Remove(personal);
                     Program.sAM.SaveChanges();
                 }
                 textBoxFirstName.Text = "";

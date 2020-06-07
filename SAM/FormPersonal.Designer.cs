@@ -32,9 +32,7 @@
             this.labelMiddleName = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
             this.listViewPersonal = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -83,35 +81,22 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // buttonDel
-            // 
-            this.buttonDel.Location = new System.Drawing.Point(0, 0);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
-            this.buttonDel.TabIndex = 10;
-            // 
             // listViewPersonal
             // 
             this.listViewPersonal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             this.listViewPersonal.FullRowSelect = true;
             this.listViewPersonal.GridLines = true;
             this.listViewPersonal.HideSelection = false;
-            this.listViewPersonal.Location = new System.Drawing.Point(235, 25);
+            this.listViewPersonal.Location = new System.Drawing.Point(290, 24);
             this.listViewPersonal.Name = "listViewPersonal";
-            this.listViewPersonal.Size = new System.Drawing.Size(495, 354);
+            this.listViewPersonal.Size = new System.Drawing.Size(440, 354);
             this.listViewPersonal.TabIndex = 5;
             this.listViewPersonal.UseCompatibleStateImageBehavior = false;
             this.listViewPersonal.View = System.Windows.Forms.View.Details;
             this.listViewPersonal.SelectedIndexChanged += new System.EventHandler(this.listViewPersonal_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "id";
-            this.columnHeader1.Width = 68;
             // 
             // columnHeader2
             // 
@@ -179,7 +164,6 @@
             this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.listViewPersonal);
-            this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelMiddleName);
@@ -197,9 +181,7 @@
         private System.Windows.Forms.Label labelMiddleName;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.ListView listViewPersonal;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
