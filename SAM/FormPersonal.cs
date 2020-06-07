@@ -57,7 +57,7 @@ namespace SAM
                 ShowPersonal();
             }
 
-                }
+        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -79,7 +79,7 @@ namespace SAM
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-    }
+        }
 
         private void listViewPersonal_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -97,6 +97,7 @@ namespace SAM
                 textBoxMiddleName.Text = "";
                 textBoxLastName.Text = "";
             }
-    } 
-} 
+        }
+    }
+}
 
