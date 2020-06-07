@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96b30ed9991744cbb2d2d54a81a58ad2" Name="Diagram1">
+        <EntityTypeShape EntityType="SAMModel.Agent" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Client" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Deal" Width="1.5" PointX="12" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Demand" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Personal" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Supply" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="SAMModel.FK_Agent_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Demand_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Supply_Agent" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Client_Demand" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Client_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Supply_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Deal_Demand" ManuallyRouted="false" />
+        <AssociationConnector Association="SAMModel.FK_Deal_Supply" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
