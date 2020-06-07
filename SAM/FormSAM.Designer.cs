@@ -74,6 +74,7 @@
             this.buttonOpenAgents.TabIndex = 3;
             this.buttonOpenAgents.Text = "Агенты";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
+            this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // buttonOpenSupply
             // 

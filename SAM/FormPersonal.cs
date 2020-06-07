@@ -40,7 +40,6 @@ namespace SAM
                 item.Tag = personal;
                 listViewPersonal.Items.Add(item);
             }
-            //выравниваем колонки в listView
             listViewPersonal.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
@@ -53,7 +52,6 @@ namespace SAM
                 personal.MiddleName = textBoxMiddleName.Text;
                 personal.LastName = textBoxLastName.Text;
                 Program.sAM.SaveChanges();
-                //отображение в listView
                 ShowPersonal();
             }
 

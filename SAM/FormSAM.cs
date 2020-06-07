@@ -33,5 +33,11 @@ namespace SAM
             Form formClients = new FormClients();
             formClients.Show();
         }
+
+        private void buttonOpenAgents_Click(object sender, EventArgs e)
+        {
+            Form formAgent = new FormAgent();
+            formAgent.Show();
+        }
     }
 }
