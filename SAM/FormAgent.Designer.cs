@@ -31,11 +31,11 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.textBoxDealShare = new System.Windows.Forms.TextBox();
+            this.textBoxDeal = new System.Windows.Forms.TextBox();
             this.textBoxShare = new System.Windows.Forms.TextBox();
             this.labelDeal = new System.Windows.Forms.Label();
             this.labelShare = new System.Windows.Forms.Label();
-            this.listViewDealShare = new System.Windows.Forms.ListView();
+            this.listViewAgent = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
@@ -69,12 +69,12 @@
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
             // 
-            // textBoxDealShare
+            // textBoxDeal
             // 
-            this.textBoxDealShare.Location = new System.Drawing.Point(8, 59);
-            this.textBoxDealShare.Name = "textBoxDealShare";
-            this.textBoxDealShare.Size = new System.Drawing.Size(145, 20);
-            this.textBoxDealShare.TabIndex = 3;
+            this.textBoxDeal.Location = new System.Drawing.Point(8, 59);
+            this.textBoxDeal.Name = "textBoxDeal";
+            this.textBoxDeal.Size = new System.Drawing.Size(145, 20);
+            this.textBoxDeal.TabIndex = 3;
             // 
             // textBoxShare
             // 
@@ -101,21 +101,21 @@
             this.labelShare.TabIndex = 6;
             this.labelShare.Text = "Доля";
             // 
-            // listViewDealShare
+            // listViewAgent
             // 
-            this.listViewDealShare.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewAgent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listViewDealShare.FullRowSelect = true;
-            this.listViewDealShare.GridLines = true;
-            this.listViewDealShare.HideSelection = false;
-            this.listViewDealShare.Location = new System.Drawing.Point(172, 43);
-            this.listViewDealShare.Name = "listViewDealShare";
-            this.listViewDealShare.Size = new System.Drawing.Size(283, 397);
-            this.listViewDealShare.TabIndex = 7;
-            this.listViewDealShare.UseCompatibleStateImageBehavior = false;
-            this.listViewDealShare.View = System.Windows.Forms.View.Details;
-            this.listViewDealShare.SelectedIndexChanged += new System.EventHandler(this.listViewDealShare_SelectedIndexChanged);
+            this.listViewAgent.FullRowSelect = true;
+            this.listViewAgent.GridLines = true;
+            this.listViewAgent.HideSelection = false;
+            this.listViewAgent.Location = new System.Drawing.Point(172, 43);
+            this.listViewAgent.Name = "listViewAgent";
+            this.listViewAgent.Size = new System.Drawing.Size(283, 397);
+            this.listViewAgent.TabIndex = 7;
+            this.listViewAgent.UseCompatibleStateImageBehavior = false;
+            this.listViewAgent.View = System.Windows.Forms.View.Details;
+            this.listViewAgent.SelectedIndexChanged += new System.EventHandler(this.listViewDealShare_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -132,11 +132,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 544);
-            this.Controls.Add(this.listViewDealShare);
+            this.Controls.Add(this.listViewAgent);
             this.Controls.Add(this.labelShare);
             this.Controls.Add(this.labelDeal);
             this.Controls.Add(this.textBoxShare);
-            this.Controls.Add(this.textBoxDealShare);
+            this.Controls.Add(this.textBoxDeal);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -152,11 +152,11 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox textBoxDealShare;
+        private System.Windows.Forms.TextBox textBoxDeal;
         private System.Windows.Forms.TextBox textBoxShare;
         private System.Windows.Forms.Label labelDeal;
         private System.Windows.Forms.Label labelShare;
-        private System.Windows.Forms.ListView listViewDealShare;
+        private System.Windows.Forms.ListView listViewAgent;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
     }

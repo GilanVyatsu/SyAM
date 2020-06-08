@@ -96,6 +96,11 @@ namespace SAM
                 textBoxLastName.Text = "";
             }
         }
+
+        private void FormPersonal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

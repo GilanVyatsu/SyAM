@@ -34,13 +34,13 @@
             this.textBoxList = new System.Windows.Forms.TextBox();
             this.textBoxTime = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.labelTime = new System.Windows.Forms.Label();
-            this.labelList = new System.Windows.Forms.Label();
+            this.listViewDelivery = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.labelList = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonEdit
@@ -51,6 +51,7 @@
             this.buttonEdit.TabIndex = 0;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
             // 
@@ -60,6 +61,7 @@
             this.buttonDelete.TabIndex = 1;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonAdd
             // 
@@ -69,6 +71,7 @@
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxList
             // 
@@ -91,21 +94,37 @@
             this.textBoxPrice.Size = new System.Drawing.Size(169, 20);
             this.textBoxPrice.TabIndex = 5;
             // 
-            // listView1
+            // listViewDelivery
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewDelivery.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(205, 45);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(440, 396);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewDelivery.FullRowSelect = true;
+            this.listViewDelivery.GridLines = true;
+            this.listViewDelivery.HideSelection = false;
+            this.listViewDelivery.Location = new System.Drawing.Point(205, 45);
+            this.listViewDelivery.Name = "listViewDelivery";
+            this.listViewDelivery.Size = new System.Drawing.Size(440, 396);
+            this.listViewDelivery.TabIndex = 6;
+            this.listViewDelivery.UseCompatibleStateImageBehavior = false;
+            this.listViewDelivery.View = System.Windows.Forms.View.Details;
+            this.listViewDelivery.SelectedIndexChanged += new System.EventHandler(this.listViewDelivery_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Список";
+            this.columnHeader1.Width = 256;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Время доставки";
+            this.columnHeader2.Width = 99;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Цена";
+            this.columnHeader3.Width = 81;
             // 
             // labelPrice
             // 
@@ -134,21 +153,6 @@
             this.labelList.TabIndex = 9;
             this.labelList.Text = "Список";
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Список";
-            this.columnHeader1.Width = 256;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Время доставки";
-            this.columnHeader2.Width = 99;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Цена";
-            this.columnHeader3.Width = 81;
-            // 
             // FormDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,7 +161,7 @@
             this.Controls.Add(this.labelList);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewDelivery);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxTime);
             this.Controls.Add(this.textBoxList);
@@ -180,7 +184,7 @@
         private System.Windows.Forms.TextBox textBoxList;
         private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewDelivery;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

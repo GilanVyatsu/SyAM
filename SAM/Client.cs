@@ -18,7 +18,6 @@ namespace SAM
         public string Email { get; set; }
         public int id { get; set; }
     
-        public virtual Demand Demand { get; set; }
         public virtual Personal Personal { get; set; }
         public virtual Supply Supply { get; set; }
     }

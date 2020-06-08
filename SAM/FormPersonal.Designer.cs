@@ -170,6 +170,7 @@
             this.Controls.Add(this.labelFirstName);
             this.Name = "FormPersonal";
             this.Text = "FormPersonal";
+            this.Load += new System.EventHandler(this.FormPersonal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

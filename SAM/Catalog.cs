@@ -20,6 +20,7 @@ namespace SAM
     
         public virtual Agent Agent { get; set; }
         public virtual Delivery Delivery { get; set; }
+        public virtual Demand Demand { get; set; }
         public virtual Store Store { get; set; }
     }
 }

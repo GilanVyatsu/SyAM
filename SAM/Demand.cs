@@ -18,10 +18,8 @@ namespace SAM
         public string Address { get; set; }
         public string MinPrice { get; set; }
         public string MaxPrice { get; set; }
-        public string AgentId { get; set; }
-        public string ClientId { get; set; }
+        public string Catalog { get; set; }
     
-        public virtual Agent Agent { get; set; }
-        public virtual Client Client { get; set; }
+        public virtual Catalog Catalog1 { get; set; }
     }
 }
