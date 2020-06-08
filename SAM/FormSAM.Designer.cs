@@ -30,11 +30,13 @@
         {
             this.buttonOpenPersonal = new System.Windows.Forms.Button();
             this.buttonOpenClients = new System.Windows.Forms.Button();
-            this.buttonOpenDeal = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
             this.buttonOpenSupply = new System.Windows.Forms.Button();
             this.buttonOpenDemand = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonOpenStore = new System.Windows.Forms.Button();
+            this.buttonOpenDelivery = new System.Windows.Forms.Button();
+            this.buttonOpenCatalog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOpenPersonal
@@ -57,18 +59,9 @@
             this.buttonOpenClients.UseVisualStyleBackColor = true;
             this.buttonOpenClients.Click += new System.EventHandler(this.buttonOpenClients_Click);
             // 
-            // buttonOpenDeal
-            // 
-            this.buttonOpenDeal.Location = new System.Drawing.Point(32, 281);
-            this.buttonOpenDeal.Name = "buttonOpenDeal";
-            this.buttonOpenDeal.Size = new System.Drawing.Size(119, 68);
-            this.buttonOpenDeal.TabIndex = 2;
-            this.buttonOpenDeal.Text = "Сделки";
-            this.buttonOpenDeal.UseVisualStyleBackColor = true;
-            // 
             // buttonOpenAgents
             // 
-            this.buttonOpenAgents.Location = new System.Drawing.Point(198, 281);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(362, 179);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
             this.buttonOpenAgents.Size = new System.Drawing.Size(119, 68);
             this.buttonOpenAgents.TabIndex = 3;
@@ -84,6 +77,7 @@
             this.buttonOpenSupply.TabIndex = 4;
             this.buttonOpenSupply.Text = "Поставки";
             this.buttonOpenSupply.UseVisualStyleBackColor = true;
+            this.buttonOpenSupply.Click += new System.EventHandler(this.buttonOpenSupply_Click);
             // 
             // buttonOpenDemand
             // 
@@ -93,27 +87,60 @@
             this.buttonOpenDemand.TabIndex = 5;
             this.buttonOpenDemand.Text = "Требования";
             this.buttonOpenDemand.UseVisualStyleBackColor = true;
+            this.buttonOpenDemand.Click += new System.EventHandler(this.buttonOpenDemand_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 41);
+            this.label1.Location = new System.Drawing.Point(195, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Система Аниме-Магазина";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // buttonOpenStore
+            // 
+            this.buttonOpenStore.Location = new System.Drawing.Point(32, 281);
+            this.buttonOpenStore.Name = "buttonOpenStore";
+            this.buttonOpenStore.Size = new System.Drawing.Size(119, 68);
+            this.buttonOpenStore.TabIndex = 7;
+            this.buttonOpenStore.Text = "Магазин";
+            this.buttonOpenStore.UseVisualStyleBackColor = true;
+            this.buttonOpenStore.Click += new System.EventHandler(this.buttonOpenStore_Click);
+            // 
+            // buttonOpenDelivery
+            // 
+            this.buttonOpenDelivery.Location = new System.Drawing.Point(362, 281);
+            this.buttonOpenDelivery.Name = "buttonOpenDelivery";
+            this.buttonOpenDelivery.Size = new System.Drawing.Size(119, 68);
+            this.buttonOpenDelivery.TabIndex = 8;
+            this.buttonOpenDelivery.Text = "Доставка";
+            this.buttonOpenDelivery.UseVisualStyleBackColor = true;
+            this.buttonOpenDelivery.Click += new System.EventHandler(this.buttonOpenDelivery_Click);
+            // 
+            // buttonOpenCatalog
+            // 
+            this.buttonOpenCatalog.Location = new System.Drawing.Point(362, 386);
+            this.buttonOpenCatalog.Name = "buttonOpenCatalog";
+            this.buttonOpenCatalog.Size = new System.Drawing.Size(119, 68);
+            this.buttonOpenCatalog.TabIndex = 9;
+            this.buttonOpenCatalog.Text = "Каталог";
+            this.buttonOpenCatalog.UseVisualStyleBackColor = true;
+            this.buttonOpenCatalog.Click += new System.EventHandler(this.buttonOpenCatalog_Click);
+            // 
             // SAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 481);
+            this.ClientSize = new System.Drawing.Size(504, 479);
+            this.Controls.Add(this.buttonOpenCatalog);
+            this.Controls.Add(this.buttonOpenDelivery);
+            this.Controls.Add(this.buttonOpenStore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonOpenDemand);
             this.Controls.Add(this.buttonOpenSupply);
             this.Controls.Add(this.buttonOpenAgents);
-            this.Controls.Add(this.buttonOpenDeal);
             this.Controls.Add(this.buttonOpenClients);
             this.Controls.Add(this.buttonOpenPersonal);
             this.Name = "SAM";
@@ -127,11 +154,13 @@
 
         private System.Windows.Forms.Button buttonOpenPersonal;
         private System.Windows.Forms.Button buttonOpenClients;
-        private System.Windows.Forms.Button buttonOpenDeal;
         private System.Windows.Forms.Button buttonOpenAgents;
         private System.Windows.Forms.Button buttonOpenSupply;
         private System.Windows.Forms.Button buttonOpenDemand;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonOpenStore;
+        private System.Windows.Forms.Button buttonOpenDelivery;
+        private System.Windows.Forms.Button buttonOpenCatalog;
     }
 }
 

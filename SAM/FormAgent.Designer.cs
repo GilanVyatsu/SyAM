@@ -31,7 +31,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.textBoxDeal = new System.Windows.Forms.TextBox();
+            this.textBoxDealShare = new System.Windows.Forms.TextBox();
             this.textBoxShare = new System.Windows.Forms.TextBox();
             this.labelDeal = new System.Windows.Forms.Label();
             this.labelShare = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
@@ -57,6 +58,7 @@
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
             // 
@@ -67,12 +69,12 @@
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
             // 
-            // textBoxDeal
+            // textBoxDealShare
             // 
-            this.textBoxDeal.Location = new System.Drawing.Point(8, 59);
-            this.textBoxDeal.Name = "textBoxDeal";
-            this.textBoxDeal.Size = new System.Drawing.Size(145, 20);
-            this.textBoxDeal.TabIndex = 3;
+            this.textBoxDealShare.Location = new System.Drawing.Point(8, 59);
+            this.textBoxDealShare.Name = "textBoxDealShare";
+            this.textBoxDealShare.Size = new System.Drawing.Size(145, 20);
+            this.textBoxDealShare.TabIndex = 3;
             // 
             // textBoxShare
             // 
@@ -113,6 +115,7 @@
             this.listViewDealShare.TabIndex = 7;
             this.listViewDealShare.UseCompatibleStateImageBehavior = false;
             this.listViewDealShare.View = System.Windows.Forms.View.Details;
+            this.listViewDealShare.SelectedIndexChanged += new System.EventHandler(this.listViewDealShare_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -133,7 +136,7 @@
             this.Controls.Add(this.labelShare);
             this.Controls.Add(this.labelDeal);
             this.Controls.Add(this.textBoxShare);
-            this.Controls.Add(this.textBoxDeal);
+            this.Controls.Add(this.textBoxDealShare);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -149,7 +152,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox textBoxDeal;
+        private System.Windows.Forms.TextBox textBoxDealShare;
         private System.Windows.Forms.TextBox textBoxShare;
         private System.Windows.Forms.Label labelDeal;
         private System.Windows.Forms.Label labelShare;

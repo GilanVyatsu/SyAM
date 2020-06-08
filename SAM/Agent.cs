@@ -18,6 +18,7 @@ namespace SAM
         public int id { get; set; }
     
         public virtual Personal Personal { get; set; }
+        public virtual Catalog Catalog { get; set; }
         public virtual Demand Demand { get; set; }
         public virtual Supply Supply { get; set; }
     }

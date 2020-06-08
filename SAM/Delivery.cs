@@ -12,11 +12,13 @@ namespace SAM
     using System;
     using System.Collections.Generic;
     
-    public partial class Deal
+    public partial class Delivery
     {
         public int id { get; set; }
+        public string price { get; set; }
+        public string time { get; set; }
+        public string list { get; set; }
     
-        public virtual Demand Demand { get; set; }
-        public virtual Supply Supply { get; set; }
+        public virtual Catalog Catalog { get; set; }
     }
 }

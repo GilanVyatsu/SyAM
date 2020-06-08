@@ -39,5 +39,35 @@ namespace SAM
             Form formAgent = new FormAgent();
             formAgent.Show();
         }
+
+        private void buttonOpenSupply_Click(object sender, EventArgs e)
+        {
+            Form formSupply = new FormSupply();
+            formSupply.Show();
+        }
+
+        private void buttonOpenDemand_Click(object sender, EventArgs e)
+        {
+            Form formDemand = new FormDemand();
+            formDemand.Show();
+        }
+
+        private void buttonOpenDelivery_Click(object sender, EventArgs e)
+        {
+            Form formDelivery = new FormDelivery();
+            formDelivery.Show();
+        }
+
+        private void buttonOpenCatalog_Click(object sender, EventArgs e)
+        {
+            Form formCatalog = new FormCatalog();
+            formCatalog.Show();
+        }
+
+        private void buttonOpenStore_Click(object sender, EventArgs e)
+        {
+            Form formStore = new FormStore();
+            formStore.Show();
+        }
     }
 }

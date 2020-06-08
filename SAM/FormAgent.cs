@@ -16,5 +16,23 @@ namespace SAM
         {
             InitializeComponent();
         }
+
+        private void listViewDealShare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Agent agent = new Agent();
+            agent.DealShare = textBoxDealShare.Text;
+            Program.sAM.Agent.Add(agent);
+            Program.sAM.SaveChanges();
+        }
     }
 }

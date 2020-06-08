@@ -23,6 +23,5 @@ namespace SAM
     
         public virtual Agent Agent { get; set; }
         public virtual Client Client { get; set; }
-        public virtual Deal Deal { get; set; }
     }
 }

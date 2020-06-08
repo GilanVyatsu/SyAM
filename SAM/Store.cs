@@ -12,14 +12,12 @@ namespace SAM
     using System;
     using System.Collections.Generic;
     
-    public partial class Supply
+    public partial class Store
     {
         public int id { get; set; }
+        public string Catalog { get; set; }
         public string Price { get; set; }
-        public string AgentId { get; set; }
-        public string ClientId { get; set; }
     
-        public virtual Agent Agent { get; set; }
-        public virtual Client Client { get; set; }
+        public virtual Catalog Catalog1 { get; set; }
     }
 }
