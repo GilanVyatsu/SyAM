@@ -185,6 +185,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ModelSAM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -221,6 +222,8 @@
       <DependentUpon>ModelSAM.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\1200px-Wikipe-tan_full_length.svg.png" />
+    <None Include="Resources\14.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

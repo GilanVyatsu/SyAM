@@ -37,6 +37,8 @@
             this.buttonOpenStore = new System.Windows.Forms.Button();
             this.buttonOpenDelivery = new System.Windows.Forms.Button();
             this.buttonOpenCatalog = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOpenPersonal
@@ -61,7 +63,7 @@
             // 
             // buttonOpenAgents
             // 
-            this.buttonOpenAgents.Location = new System.Drawing.Point(362, 179);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(362, 281);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
             this.buttonOpenAgents.Size = new System.Drawing.Size(119, 68);
             this.buttonOpenAgents.TabIndex = 3;
@@ -92,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 63);
+            this.label1.Location = new System.Drawing.Point(177, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 6;
@@ -111,7 +113,7 @@
             // 
             // buttonOpenDelivery
             // 
-            this.buttonOpenDelivery.Location = new System.Drawing.Point(362, 281);
+            this.buttonOpenDelivery.Location = new System.Drawing.Point(198, 281);
             this.buttonOpenDelivery.Name = "buttonOpenDelivery";
             this.buttonOpenDelivery.Size = new System.Drawing.Size(119, 68);
             this.buttonOpenDelivery.TabIndex = 8;
@@ -129,11 +131,22 @@
             this.buttonOpenCatalog.UseVisualStyleBackColor = true;
             this.buttonOpenCatalog.Click += new System.EventHandler(this.buttonOpenCatalog_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SAM.Properties.Resources._1200px_Wikipe_tan_full_length_svg;
+            this.pictureBox1.Location = new System.Drawing.Point(333, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // SAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 479);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonOpenCatalog);
             this.Controls.Add(this.buttonOpenDelivery);
             this.Controls.Add(this.buttonOpenStore);
@@ -145,6 +158,7 @@
             this.Controls.Add(this.buttonOpenPersonal);
             this.Name = "SAM";
             this.Text = "SAM";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +175,7 @@
         private System.Windows.Forms.Button buttonOpenStore;
         private System.Windows.Forms.Button buttonOpenDelivery;
         private System.Windows.Forms.Button buttonOpenCatalog;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
