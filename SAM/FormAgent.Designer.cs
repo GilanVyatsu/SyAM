@@ -38,6 +38,7 @@
             this.listViewAgent = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -105,7 +106,8 @@
             // 
             this.listViewAgent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listViewAgent.FullRowSelect = true;
             this.listViewAgent.GridLines = true;
             this.listViewAgent.HideSelection = false;
@@ -119,13 +121,18 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Сделка с";
-            this.columnHeader1.Width = 183;
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Доля";
-            this.columnHeader2.Width = 97;
+            this.columnHeader2.Text = "Сделка с";
+            this.columnHeader2.Width = 201;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Доля ";
+            this.columnHeader3.Width = 78;
             // 
             // FormAgent
             // 
@@ -159,5 +166,6 @@
         private System.Windows.Forms.ListView listViewAgent;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

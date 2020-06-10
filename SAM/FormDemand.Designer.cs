@@ -36,14 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.listViewDemand = new System.Windows.Forms.ListView();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.textBoxMinPrice = new System.Windows.Forms.TextBox();
-            this.textBoxMaxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxCatalog = new System.Windows.Forms.TextBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxMinPrice = new System.Windows.Forms.TextBox();
+            this.textBoxMaxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxCatalog = new System.Windows.Forms.TextBox();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -119,7 +120,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listViewDemand.FullRowSelect = true;
             this.listViewDemand.GridLines = true;
             this.listViewDemand.HideSelection = false;
@@ -130,6 +132,26 @@
             this.listViewDemand.UseCompatibleStateImageBehavior = false;
             this.listViewDemand.View = System.Windows.Forms.View.Details;
             this.listViewDemand.SelectedIndexChanged += new System.EventHandler(this.listViewDemand_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 0;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Адрес магазина";
+            this.columnHeader2.Width = 114;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Минимальная цена";
+            this.columnHeader3.Width = 128;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Максимальная цена";
+            this.columnHeader4.Width = 145;
             // 
             // textBoxAddress
             // 
@@ -159,25 +181,10 @@
             this.textBoxCatalog.Size = new System.Drawing.Size(171, 20);
             this.textBoxCatalog.TabIndex = 13;
             // 
-            // columnHeader1
+            // columnHeader5
             // 
-            this.columnHeader1.Text = "Адрес";
-            this.columnHeader1.Width = 135;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Минимальная цена";
-            this.columnHeader2.Width = 114;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Максимальная цена";
-            this.columnHeader3.Width = 128;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Каталог товара";
-            this.columnHeader4.Width = 145;
+            this.columnHeader5.Text = "Каталог товара";
+            this.columnHeader5.Width = 135;
             // 
             // FormDemand
             // 
@@ -221,5 +228,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

@@ -38,6 +38,7 @@
             this.listViewSupply = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -106,7 +107,8 @@
             // 
             this.listViewSupply.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listViewSupply.FullRowSelect = true;
             this.listViewSupply.GridLines = true;
             this.listViewSupply.HideSelection = false;
@@ -120,13 +122,18 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Цена";
-            this.columnHeader1.Width = 64;
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Имя партнера";
-            this.columnHeader2.Width = 163;
+            this.columnHeader2.Text = "Стоимость ";
+            this.columnHeader2.Width = 70;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Имя партнера";
+            this.columnHeader3.Width = 158;
             // 
             // FormSupply
             // 
@@ -160,5 +167,6 @@
         private System.Windows.Forms.ListView listViewSupply;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

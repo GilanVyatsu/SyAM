@@ -33,14 +33,15 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.listViewPersonal = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxMiddleName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.labelLastName = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // labelFirstName
@@ -84,9 +85,10 @@
             // listViewPersonal
             // 
             this.listViewPersonal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
             this.listViewPersonal.FullRowSelect = true;
             this.listViewPersonal.GridLines = true;
             this.listViewPersonal.HideSelection = false;
@@ -97,21 +99,6 @@
             this.listViewPersonal.UseCompatibleStateImageBehavior = false;
             this.listViewPersonal.View = System.Windows.Forms.View.Details;
             this.listViewPersonal.SelectedIndexChanged += new System.EventHandler(this.listViewPersonal_SelectedIndexChanged);
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Имя";
-            this.columnHeader2.Width = 115;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Фамилия";
-            this.columnHeader3.Width = 138;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Отчество";
-            this.columnHeader4.Width = 181;
             // 
             // textBoxFirstName
             // 
@@ -153,6 +140,26 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "id";
+            this.columnHeader5.Width = 0;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Имя";
+            this.columnHeader6.Width = 111;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Фамилия";
+            this.columnHeader7.Width = 111;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Отчество";
+            this.columnHeader8.Width = 123;
+            // 
             // FormPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,13 +190,14 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.ListView listViewPersonal;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.TextBox textBoxMiddleName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

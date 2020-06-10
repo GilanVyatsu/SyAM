@@ -34,10 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listViewCatalog = new System.Windows.Forms.ListView();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonEdit
@@ -92,7 +93,8 @@
             // 
             this.listViewCatalog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listViewCatalog.FullRowSelect = true;
             this.listViewCatalog.GridLines = true;
             this.listViewCatalog.HideSelection = false;
@@ -103,6 +105,16 @@
             this.listViewCatalog.UseCompatibleStateImageBehavior = false;
             this.listViewCatalog.View = System.Windows.Forms.View.Details;
             this.listViewCatalog.SelectedIndexChanged += new System.EventHandler(this.listViewCatalog_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "0";
+            this.columnHeader1.Width = 0;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Название";
+            this.columnHeader2.Width = 72;
             // 
             // textBoxName
             // 
@@ -118,15 +130,9 @@
             this.textBoxPrice.Size = new System.Drawing.Size(144, 20);
             this.textBoxPrice.TabIndex = 7;
             // 
-            // columnHeader1
+            // columnHeader3
             // 
-            this.columnHeader1.Text = "Название";
-            this.columnHeader1.Width = 174;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Цена";
-            this.columnHeader2.Width = 72;
+            this.columnHeader3.Text = "Цена";
             // 
             // FormCatalog
             // 
@@ -160,5 +166,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

@@ -41,6 +41,7 @@
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelList = new System.Windows.Forms.Label();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonEdit
@@ -99,7 +100,8 @@
             this.listViewDelivery.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listViewDelivery.FullRowSelect = true;
             this.listViewDelivery.GridLines = true;
             this.listViewDelivery.HideSelection = false;
@@ -113,18 +115,18 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Список";
-            this.columnHeader1.Width = 256;
+            this.columnHeader1.Text = "id";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Время доставки";
-            this.columnHeader2.Width = 99;
+            this.columnHeader2.Text = "Цена";
+            this.columnHeader2.Width = 70;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Цена";
-            this.columnHeader3.Width = 81;
+            this.columnHeader3.Text = "Время доставки";
+            this.columnHeader3.Width = 96;
             // 
             // labelPrice
             // 
@@ -152,6 +154,11 @@
             this.labelList.Size = new System.Drawing.Size(44, 13);
             this.labelList.TabIndex = 9;
             this.labelList.Text = "Список";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Список";
+            this.columnHeader4.Width = 268;
             // 
             // FormDelivery
             // 
@@ -191,5 +198,6 @@
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Label labelList;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
