@@ -41,6 +41,7 @@ namespace SAM
             else
             {
                 bool key = false;
+                foreach (Login login in Program.sAM.Login)
                 {
                     if (textBoxLogin.Text == login.Login1 && textBoxPassword.Text == login.Password)
                     {
@@ -69,6 +70,11 @@ namespace SAM
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
