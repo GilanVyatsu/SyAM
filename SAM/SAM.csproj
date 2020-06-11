@@ -234,6 +234,9 @@
     <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text1.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModelSAM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelSAM.edmx</DependentUpon>
@@ -244,7 +247,6 @@
       <DependentUpon>ModelSAM.edmx</DependentUpon>
       <LastGenOutput>ModelSAM.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

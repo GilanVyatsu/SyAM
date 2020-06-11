@@ -16,17 +16,15 @@ namespace SAM
         public string Password;
         public string Type;
     }
-    public Menu()
-    {
-        InitializeComponent();
-        if (FormLogin.login == "personal") buttonLogin.Enabled = false; 
-    }
+
     public partial class FormLogin : Form
     {
         public static Login login = new Login();
         public FormLogin()
         {
             InitializeComponent();
+            if (FormLogin.login.Login1 == "personal") buttonLogin.Enabled = false;
+            labelHello.Text = "Добро пожаловать, Семпаай!^^" + FormLogin.login.Login1;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,8 +58,8 @@ namespace SAM
                     else
                     {
                         MessageBox.Show("Данные введены верно", "Пользователь найдем", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Menu menu = new Menu();
-                        menu.Show();
+                        SAM formSAM = new SAM();
+                        formSAM.Show();
                         this.Hide();
                     }
                 }
