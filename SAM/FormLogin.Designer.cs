@@ -57,12 +57,14 @@
             this.buttonExit.TabIndex = 1;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // labelHello
             // 
-            this.labelHello.Location = new System.Drawing.Point(165, 28);
+            this.labelHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHello.Location = new System.Drawing.Point(140, 9);
             this.labelHello.Name = "labelHello";
-            this.labelHello.Size = new System.Drawing.Size(173, 19);
+            this.labelHello.Size = new System.Drawing.Size(210, 44);
             this.labelHello.TabIndex = 2;
             this.labelHello.Text = "Добро пожаловать, Семпаай!!<3";
             this.labelHello.Click += new System.EventHandler(this.label1_Click);
@@ -84,18 +86,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 81);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(70, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Логин";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 137);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(70, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Пароль";
             // 

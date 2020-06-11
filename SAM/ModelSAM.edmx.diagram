@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="SAMModel.Client" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Delivery" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Demand" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SAMModel.Login" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Login" Width="1.5" PointX="1.125" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Personal" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Store" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Supply" Width="1.5" PointX="5.75" PointY="11.25" IsExpanded="true" />
