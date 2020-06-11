@@ -30,6 +30,7 @@ namespace SAM
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Delivery> Delivery { get; set; }
         public virtual DbSet<Demand> Demand { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<Personal> Personal { get; set; }
         public virtual DbSet<Store> Store { get; set; }
         public virtual DbSet<Supply> Supply { get; set; }

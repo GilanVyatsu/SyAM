@@ -12,15 +12,11 @@ namespace SAM
     using System;
     using System.Collections.Generic;
     
-    public partial class Demand
+    public partial class Login
     {
         public int id { get; set; }
-        public string Address { get; set; }
-        public string MinPrice { get; set; }
-        public string MaxPrice { get; set; }
-        public string Catalog { get; set; }
-    
-        public virtual Catalog Catalog1 { get; set; }
-        public virtual Store Store { get; set; }
+        public string Login1 { get; set; }
+        public string Password { get; set; }
+        public string Type { get; set; }
     }
 }

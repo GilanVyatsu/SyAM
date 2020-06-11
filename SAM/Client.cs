@@ -14,11 +14,10 @@ namespace SAM
     
     public partial class Client
     {
+        public int id { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int id { get; set; }
     
-        public virtual Personal Personal { get; set; }
-        public virtual Supply Supply { get; set; }
+        public virtual Agent Agent { get; set; }
     }
 }

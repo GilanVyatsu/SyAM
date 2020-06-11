@@ -14,12 +14,11 @@ namespace SAM
     
     public partial class Agent
     {
-        public string Deal { get; set; }
         public int id { get; set; }
+        public string Deal { get; set; }
         public string Share { get; set; }
     
-        public virtual Personal Personal { get; set; }
-        public virtual Catalog Catalog { get; set; }
+        public virtual Client Client { get; set; }
         public virtual Supply Supply { get; set; }
     }
 }

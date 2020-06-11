@@ -122,5 +122,37 @@ namespace SAM.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_throw_pillows_anime_waifu_pillow_love_furniture_text1 {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_white_dialog_box_speech_balloon_comic_book_speech_buble_miscellaneous_template_comics_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-white-dialog-box-speech-balloon-comic-book-speech-buble-miscellan" +
+                        "eous-template-comics-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_white_dialog_box_speech_balloon_comic_book_speech_buble_miscellaneous_template_comics_thumbnail1 {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-white-dialog-box-speech-balloon-comic-book-speech-buble-miscellan" +
+                        "eous-template-comics-thumbnail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

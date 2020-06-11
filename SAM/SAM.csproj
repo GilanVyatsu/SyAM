@@ -130,6 +130,9 @@
     <Compile Include="FormSupply.Designer.cs">
       <DependentUpon>FormSupply.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <DependentUpon>ModelSAM.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelSAM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -225,6 +228,12 @@
     <None Include="Resources\14.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail1.png" />
+    <None Include="Resources\png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-cartoon-fictional-character-clipart.png" />
+    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail.png" />
+    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModelSAM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelSAM.edmx</DependentUpon>
@@ -235,10 +244,7 @@
       <DependentUpon>ModelSAM.edmx</DependentUpon>
       <LastGenOutput>ModelSAM.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail1.png" />
-    <None Include="Resources\png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-cartoon-fictional-character-clipart.png" />
-    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail.png" />
-    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text.png" />
+    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,6 +19,6 @@ namespace SAM
         public string time { get; set; }
         public string list { get; set; }
     
-        public virtual Catalog Catalog { get; set; }
+        public virtual Store Store { get; set; }
     }
 }

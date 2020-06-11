@@ -19,6 +19,5 @@ namespace SAM
         public string AgentId { get; set; }
     
         public virtual Agent Agent { get; set; }
-        public virtual Client Client { get; set; }
     }
 }

@@ -134,9 +134,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SAM.Properties.Resources._1200px_Wikipe_tan_full_length_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(333, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(332, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 263);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 263);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;

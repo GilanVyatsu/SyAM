@@ -19,7 +19,6 @@ namespace SAM
         public string MiddleName { get; set; }
         public string LastName { get; set; }
     
-        public virtual Agent Agent { get; set; }
-        public virtual Client Client { get; set; }
+        public virtual Store Store { get; set; }
     }
 }

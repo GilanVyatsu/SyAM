@@ -19,5 +19,8 @@ namespace SAM
         public string Price { get; set; }
     
         public virtual Catalog Catalog1 { get; set; }
+        public virtual Delivery Delivery { get; set; }
+        public virtual Demand Demand { get; set; }
+        public virtual Personal Personal { get; set; }
     }
 }

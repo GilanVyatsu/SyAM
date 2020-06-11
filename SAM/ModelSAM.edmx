@@ -9,34 +9,34 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="Deal" Type="nvarchar(max)" Nullable="false" />
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="Share" Type="nvarchar(max)" />
+          <Property Name="Deal" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Share" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Catalog">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Price" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="Phone" Type="varchar" MaxLength="50" />
-          <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Delivery">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="price" Type="nvarchar(max)" />
-          <Property Name="time" Type="nvarchar(max)" />
-          <Property Name="list" Type="nvarchar(max)" />
+          <Property Name="price" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="time" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="list" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Demand">
           <Key>
@@ -48,36 +48,45 @@
           <Property Name="MaxPrice" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Catalog" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <EntityType Name="Personal">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" />
-          <Property Name="MiddleName" Type="varchar" MaxLength="50" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Store">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="Catalog" Type="nvarchar(max)" />
-          <Property Name="Price" Type="nvarchar(max)" />
+          <Property Name="Catalog" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Supply">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="Price" Type="nvarchar(max)" />
-          <Property Name="AgentId" Type="nvarchar(max)" />
+          <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AgentId" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Agent_Personal">
-          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+        <Association Name="FK_Agent_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
           <End Role="Agent" Type="Self.Agent" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Personal">
+            <Principal Role="Client">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Agent">
@@ -85,86 +94,74 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+        <Association Name="FK_Agent_Supply">
+          <End Role="Supply" Type="Self.Supply" Multiplicity="1" />
+          <End Role="Agent" Type="Self.Agent" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Agent">
+            <Principal Role="Supply">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Agent">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Delivery">
-          <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+        <Association Name="FK_Demand_Catalog">
+          <End Role="Catalog" Type="Self.Catalog" Multiplicity="1" />
+          <End Role="Demand" Type="Self.Demand" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Delivery">
+            <Principal Role="Catalog">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Demand">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Demand">
-          <End Role="Demand" Type="Self.Demand" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Demand">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Catalog">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Catalog_Store">
+        <Association Name="FK_Demand_Store">
           <End Role="Store" Type="Self.Store" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+          <End Role="Demand" Type="Self.Demand" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Store">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Demand">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Client_Personal">
+        <Association Name="FK_Store_Catalog">
+          <End Role="Catalog" Type="Self.Catalog" Multiplicity="1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Store">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Store_Delivery">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Store">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Store_Personal">
           <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
-          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Personal">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Client">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Supply_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Supply" Type="Self.Supply" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Agent">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Supply">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Supply_Client">
-          <End Role="Client" Type="Self.Client" Multiplicity="1" />
-          <End Role="Supply" Type="Self.Supply" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Client">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Supply">
+            <Dependent Role="Store">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
@@ -175,40 +172,37 @@
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Demand" EntityType="Self.Demand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supply" EntityType="Self.Supply" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Agent_Personal" Association="Self.FK_Agent_Personal">
-            <End Role="Personal" EntitySet="Personal" />
+          <AssociationSet Name="FK_Agent_Client" Association="Self.FK_Agent_Client">
+            <End Role="Client" EntitySet="Client" />
             <End Role="Agent" EntitySet="Agent" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Agent" Association="Self.FK_Catalog_Agent">
+          <AssociationSet Name="FK_Agent_Supply" Association="Self.FK_Agent_Supply">
+            <End Role="Supply" EntitySet="Supply" />
             <End Role="Agent" EntitySet="Agent" />
-            <End Role="Catalog" EntitySet="Catalog" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Delivery" Association="Self.FK_Catalog_Delivery">
-            <End Role="Delivery" EntitySet="Delivery" />
+          <AssociationSet Name="FK_Demand_Catalog" Association="Self.FK_Demand_Catalog">
             <End Role="Catalog" EntitySet="Catalog" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Demand" Association="Self.FK_Catalog_Demand">
             <End Role="Demand" EntitySet="Demand" />
-            <End Role="Catalog" EntitySet="Catalog" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Store" Association="Self.FK_Catalog_Store">
+          <AssociationSet Name="FK_Demand_Store" Association="Self.FK_Demand_Store">
             <End Role="Store" EntitySet="Store" />
+            <End Role="Demand" EntitySet="Demand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Store_Catalog" Association="Self.FK_Store_Catalog">
             <End Role="Catalog" EntitySet="Catalog" />
+            <End Role="Store" EntitySet="Store" />
           </AssociationSet>
-          <AssociationSet Name="FK_Client_Personal" Association="Self.FK_Client_Personal">
+          <AssociationSet Name="FK_Store_Delivery" Association="Self.FK_Store_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="Store" EntitySet="Store" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Store_Personal" Association="Self.FK_Store_Personal">
             <End Role="Personal" EntitySet="Personal" />
-            <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Supply_Agent" Association="Self.FK_Supply_Agent">
-            <End Role="Agent" EntitySet="Agent" />
-            <End Role="Supply" EntitySet="Supply" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Supply_Client" Association="Self.FK_Supply_Client">
-            <End Role="Client" EntitySet="Client" />
-            <End Role="Supply" EntitySet="Supply" />
+            <End Role="Store" EntitySet="Store" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -220,44 +214,40 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="Deal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="Share" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Personal" Relationship="Self.FK_Agent_Personal" FromRole="Agent" ToRole="Personal" />
-          <NavigationProperty Name="Catalog" Relationship="Self.FK_Catalog_Agent" FromRole="Agent" ToRole="Catalog" />
-          <NavigationProperty Name="Supply" Relationship="Self.FK_Supply_Agent" FromRole="Agent" ToRole="Supply" />
+          <Property Name="Deal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Share" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK_Agent_Client" FromRole="Agent" ToRole="Client" />
+          <NavigationProperty Name="Supply" Relationship="Self.FK_Agent_Supply" FromRole="Agent" ToRole="Supply" />
         </EntityType>
         <EntityType Name="Catalog">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Agent" Relationship="Self.FK_Catalog_Agent" FromRole="Catalog" ToRole="Agent" />
-          <NavigationProperty Name="Delivery" Relationship="Self.FK_Catalog_Delivery" FromRole="Catalog" ToRole="Delivery" />
-          <NavigationProperty Name="Demand" Relationship="Self.FK_Catalog_Demand" FromRole="Catalog" ToRole="Demand" />
-          <NavigationProperty Name="Store" Relationship="Self.FK_Catalog_Store" FromRole="Catalog" ToRole="Store" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Demand" Relationship="Self.FK_Demand_Catalog" FromRole="Catalog" ToRole="Demand" />
+          <NavigationProperty Name="Store" Relationship="Self.FK_Store_Catalog" FromRole="Catalog" ToRole="Store" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Personal" Relationship="Self.FK_Client_Personal" FromRole="Client" ToRole="Personal" />
-          <NavigationProperty Name="Supply" Relationship="Self.FK_Supply_Client" FromRole="Client" ToRole="Supply" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Agent" Relationship="Self.FK_Agent_Client" FromRole="Client" ToRole="Agent" />
         </EntityType>
         <EntityType Name="Delivery">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="list" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Catalog" Relationship="Self.FK_Catalog_Delivery" FromRole="Delivery" ToRole="Catalog" />
+          <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="list" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Store" Relationship="Self.FK_Store_Delivery" FromRole="Delivery" ToRole="Store" />
         </EntityType>
         <EntityType Name="Demand">
           <Key>
@@ -268,43 +258,54 @@
           <Property Name="MinPrice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaxPrice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Catalog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Catalog1" Relationship="Self.FK_Catalog_Demand" FromRole="Demand" ToRole="Catalog" />
+          <NavigationProperty Name="Catalog1" Relationship="Self.FK_Demand_Catalog" FromRole="Demand" ToRole="Catalog" />
+          <NavigationProperty Name="Store" Relationship="Self.FK_Demand_Store" FromRole="Demand" ToRole="Store" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Login1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Personal">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Agent" Relationship="Self.FK_Agent_Personal" FromRole="Personal" ToRole="Agent" />
-          <NavigationProperty Name="Client" Relationship="Self.FK_Client_Personal" FromRole="Personal" ToRole="Client" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Store" Relationship="Self.FK_Store_Personal" FromRole="Personal" ToRole="Store" />
         </EntityType>
         <EntityType Name="Store">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="Catalog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Catalog1" Relationship="Self.FK_Catalog_Store" FromRole="Store" ToRole="Catalog" />
+          <Property Name="Catalog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Catalog1" Relationship="Self.FK_Store_Catalog" FromRole="Store" ToRole="Catalog" />
+          <NavigationProperty Name="Delivery" Relationship="Self.FK_Store_Delivery" FromRole="Store" ToRole="Delivery" />
+          <NavigationProperty Name="Demand" Relationship="Self.FK_Demand_Store" FromRole="Store" ToRole="Demand" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_Store_Personal" FromRole="Store" ToRole="Personal" />
         </EntityType>
         <EntityType Name="Supply">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="AgentId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Agent" Relationship="Self.FK_Supply_Agent" FromRole="Supply" ToRole="Agent" />
-          <NavigationProperty Name="Client" Relationship="Self.FK_Supply_Client" FromRole="Supply" ToRole="Client" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgentId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Agent" Relationship="Self.FK_Agent_Supply" FromRole="Supply" ToRole="Agent" />
         </EntityType>
-        <Association Name="FK_Agent_Personal">
-          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+        <Association Name="FK_Agent_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
           <End Role="Agent" Type="Self.Agent" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Personal">
+            <Principal Role="Client">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Agent">
@@ -312,86 +313,74 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+        <Association Name="FK_Agent_Supply">
+          <End Role="Supply" Type="Self.Supply" Multiplicity="1" />
+          <End Role="Agent" Type="Self.Agent" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Agent">
+            <Principal Role="Supply">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Agent">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Supply_Agent">
-          <End Role="Agent" Type="Self.Agent" Multiplicity="1" />
-          <End Role="Supply" Type="Self.Supply" Multiplicity="0..1" />
+        <Association Name="FK_Demand_Catalog">
+          <End Role="Catalog" Type="Self.Catalog" Multiplicity="1" />
+          <End Role="Demand" Type="Self.Demand" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Agent">
+            <Principal Role="Catalog">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Supply">
+            <Dependent Role="Demand">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Delivery">
+        <Association Name="FK_Store_Catalog">
+          <End Role="Catalog" Type="Self.Catalog" Multiplicity="1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Catalog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Store">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Store_Delivery">
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Delivery">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Store">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Catalog_Demand">
-          <End Role="Demand" Type="Self.Demand" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Demand">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Catalog">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Catalog_Store">
+        <Association Name="FK_Demand_Store">
           <End Role="Store" Type="Self.Store" Multiplicity="1" />
-          <End Role="Catalog" Type="Self.Catalog" Multiplicity="0..1" />
+          <End Role="Demand" Type="Self.Demand" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Store">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Catalog">
+            <Dependent Role="Demand">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Client_Personal">
+        <Association Name="FK_Store_Personal">
           <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
-          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Personal">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Client">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Supply_Client">
-          <End Role="Client" Type="Self.Client" Multiplicity="1" />
-          <End Role="Supply" Type="Self.Supply" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Client">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Supply">
+            <Dependent Role="Store">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
@@ -402,40 +391,37 @@
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Delivery" EntityType="Self.Delivery" />
           <EntitySet Name="Demand" EntityType="Self.Demand" />
+          <EntitySet Name="Login" EntityType="Self.Login" />
           <EntitySet Name="Personal" EntityType="Self.Personal" />
           <EntitySet Name="Store" EntityType="Self.Store" />
           <EntitySet Name="Supply" EntityType="Self.Supply" />
-          <AssociationSet Name="FK_Agent_Personal" Association="Self.FK_Agent_Personal">
-            <End Role="Personal" EntitySet="Personal" />
+          <AssociationSet Name="FK_Agent_Client" Association="Self.FK_Agent_Client">
+            <End Role="Client" EntitySet="Client" />
             <End Role="Agent" EntitySet="Agent" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Agent" Association="Self.FK_Catalog_Agent">
-            <End Role="Agent" EntitySet="Agent" />
-            <End Role="Catalog" EntitySet="Catalog" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Supply_Agent" Association="Self.FK_Supply_Agent">
-            <End Role="Agent" EntitySet="Agent" />
+          <AssociationSet Name="FK_Agent_Supply" Association="Self.FK_Agent_Supply">
             <End Role="Supply" EntitySet="Supply" />
+            <End Role="Agent" EntitySet="Agent" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Delivery" Association="Self.FK_Catalog_Delivery">
-            <End Role="Delivery" EntitySet="Delivery" />
+          <AssociationSet Name="FK_Demand_Catalog" Association="Self.FK_Demand_Catalog">
             <End Role="Catalog" EntitySet="Catalog" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Demand" Association="Self.FK_Catalog_Demand">
             <End Role="Demand" EntitySet="Demand" />
-            <End Role="Catalog" EntitySet="Catalog" />
           </AssociationSet>
-          <AssociationSet Name="FK_Catalog_Store" Association="Self.FK_Catalog_Store">
+          <AssociationSet Name="FK_Store_Catalog" Association="Self.FK_Store_Catalog">
+            <End Role="Catalog" EntitySet="Catalog" />
             <End Role="Store" EntitySet="Store" />
-            <End Role="Catalog" EntitySet="Catalog" />
           </AssociationSet>
-          <AssociationSet Name="FK_Client_Personal" Association="Self.FK_Client_Personal">
+          <AssociationSet Name="FK_Store_Delivery" Association="Self.FK_Store_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="Store" EntitySet="Store" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Demand_Store" Association="Self.FK_Demand_Store">
+            <End Role="Store" EntitySet="Store" />
+            <End Role="Demand" EntitySet="Demand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Store_Personal" Association="Self.FK_Store_Personal">
             <End Role="Personal" EntitySet="Personal" />
-            <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Supply_Client" Association="Self.FK_Supply_Client">
-            <End Role="Client" EntitySet="Client" />
-            <End Role="Supply" EntitySet="Supply" />
+            <End Role="Store" EntitySet="Store" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -447,8 +433,8 @@
           <EntitySetMapping Name="Agent">
             <EntityTypeMapping TypeName="SAMModel.Agent">
               <MappingFragment StoreEntitySet="Agent">
-                <ScalarProperty Name="Deal" ColumnName="Deal" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Deal" ColumnName="Deal" />
                 <ScalarProperty Name="Share" ColumnName="Share" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -465,9 +451,9 @@
           <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="SAMModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -489,6 +475,16 @@
                 <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
                 <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
                 <ScalarProperty Name="Catalog" ColumnName="Catalog" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="SAMModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Login1" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
