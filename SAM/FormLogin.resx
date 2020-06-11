@@ -117,23 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1200px-Wikipe-tan_full_length.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1200px-Wikipe-tan_full_length.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-cartoon-fictional-character-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-cartoon-fictional-character-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

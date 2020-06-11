@@ -79,5 +79,48 @@ namespace SAM.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap girl_anime_character_gabriel_raphiel_ainsworth_shiraha_anime_crunchyroll_manga_others_png_clip_art_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-ot" +
+                        "hers-png-clip-art-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap girl_anime_character_gabriel_raphiel_ainsworth_shiraha_anime_crunchyroll_manga_others_png_clip_art_thumbnail1 {
+            get {
+                object obj = ResourceManager.GetObject("girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-ot" +
+                        "hers-png-clip-art-thumbnail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_shougo_makishima_oreimo_char_aznable_anime_character_oreimo_cg_artwork_manga_cartoon_fictional_character_clipart {
+            get {
+                object obj = ResourceManager.GetObject("png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-" +
+                        "cartoon-fictional-character-clipart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_throw_pillows_anime_waifu_pillow_love_furniture_text {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

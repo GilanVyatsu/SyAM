@@ -100,6 +100,12 @@
     <Compile Include="FormDemand.Designer.cs">
       <DependentUpon>FormDemand.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="FormDemand.resx">
       <DependentUpon>FormDemand.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPersonal.resx">
       <DependentUpon>FormPersonal.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +235,10 @@
       <DependentUpon>ModelSAM.edmx</DependentUpon>
       <LastGenOutput>ModelSAM.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail1.png" />
+    <None Include="Resources\png-shougo-makishima-oreimo-char-aznable-anime-character-oreimo-cg-artwork-manga-cartoon-fictional-character-clipart.png" />
+    <None Include="Resources\girl-anime-character-gabriel-raphiel-ainsworth-shiraha-anime-crunchyroll-manga-others-png-clip-art-thumbnail.png" />
+    <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
