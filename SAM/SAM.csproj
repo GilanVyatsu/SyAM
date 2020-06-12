@@ -57,19 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Catalog.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Delivery.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Demand.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="FormAgent.cs">
       <SubType>Form</SubType>
@@ -132,33 +132,33 @@
       <DependentUpon>FormSupply.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
+    <Compile Include="ModelSAM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>ModelSAM.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="ModelSAM.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="ModelSAM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelSAM.edmx</DependentUpon>
     </Compile>
     <Compile Include="Personal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <Compile Include="Supply.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelSAM.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormAgent.resx">
       <DependentUpon>FormAgent.cs</DependentUpon>
@@ -200,12 +200,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="ModelSAM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelSAM.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="ModelSAM.edmx.diagram">
+      <DependentUpon>ModelSAM.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -238,15 +238,15 @@
     <None Include="Resources\png-transparent-throw-pillows-anime-waifu-pillow-love-furniture-text1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Content Include="ModelSAM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>ModelSAM.edmx</DependentUpon>
+      <LastGenOutput>ModelSAM.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="ModelSAM.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>ModelSAM.edmx</DependentUpon>
+      <LastGenOutput>ModelSAM.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

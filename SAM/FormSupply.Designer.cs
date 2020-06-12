@@ -39,7 +39,9 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -109,13 +111,14 @@
             this.listViewSupply.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listViewSupply.FullRowSelect = true;
             this.listViewSupply.GridLines = true;
             this.listViewSupply.HideSelection = false;
-            this.listViewSupply.Location = new System.Drawing.Point(230, 32);
+            this.listViewSupply.Location = new System.Drawing.Point(30, 153);
             this.listViewSupply.Name = "listViewSupply";
-            this.listViewSupply.Size = new System.Drawing.Size(232, 318);
+            this.listViewSupply.Size = new System.Drawing.Size(432, 197);
             this.listViewSupply.TabIndex = 9;
             this.listViewSupply.UseCompatibleStateImageBehavior = false;
             this.listViewSupply.View = System.Windows.Forms.View.Details;
@@ -134,22 +137,37 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Имя партнера";
-            this.columnHeader3.Width = 158;
+            this.columnHeader3.Width = 255;
             // 
-            // dateTimePicker1
+            // textBoxTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(30, 148);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(176, 20);
-            this.dateTimePicker1.TabIndex = 10;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.textBoxTime.Location = new System.Drawing.Point(242, 67);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(176, 20);
+            this.textBoxTime.TabIndex = 10;
+            this.textBoxTime.TextChanged += new System.EventHandler(this.textBoxTime_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(239, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Дата поставки";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Дата поставки";
+            this.columnHeader4.Width = 102;
             // 
             // FormSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxTime);
             this.Controls.Add(this.listViewSupply);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxAgentid);
@@ -178,6 +196,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox textBoxTime;
+        private System.Windows.Forms.Label label3;
     }
 }

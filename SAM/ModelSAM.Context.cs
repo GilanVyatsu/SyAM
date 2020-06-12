@@ -13,10 +13,10 @@ namespace SAM
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SAMEntities3 : DbContext
+    public partial class SAMEntities : DbContext
     {
-        public SAMEntities3()
-            : base("name=SAMEntities3")
+        public SAMEntities()
+            : base("name=SAMEntities")
         {
         }
     

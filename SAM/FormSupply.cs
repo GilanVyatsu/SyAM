@@ -23,6 +23,7 @@ namespace SAM
             Supply supply = new Supply();
             supply.Price = textBoxPrice.Text;
             supply.AgentId = textBoxAgentid.Text;
+            supply.Time = textBoxTime.Text;
             Program.sAM.Supply.Add(supply);
             Program.sAM.SaveChanges();
         }
@@ -33,7 +34,7 @@ namespace SAM
             {
                 ListViewItem item = new ListViewItem(new string[]
                 {
-                    supply.id.ToString(), supply.Price, supply.AgentId,
+                    supply.id.ToString(), supply.Price, supply.AgentId, supply.Time
                 });
                 item.Tag = supply;
                 listViewSupply.Items.Add(item);
@@ -48,6 +49,7 @@ namespace SAM
                 Supply supply = listViewSupply.SelectedItems[0].Tag as Supply;
                 supply.Price = textBoxPrice.Text;
                 supply.AgentId = textBoxAgentid.Text;
+                supply.Time = textBoxTime.Text;
                 Program.sAM.SaveChanges();
                 ShowSupply();
             }
@@ -65,6 +67,7 @@ namespace SAM
                 }
                 textBoxPrice.Text = "";
                 textBoxAgentid.Text = "";
+                textBoxTime.Text = "";
             }
             catch
             {
@@ -80,16 +83,22 @@ namespace SAM
                 Supply supply = listViewSupply.SelectedItems[0].Tag as Supply;
                 textBoxPrice.Text = supply.Price;
                 textBoxAgentid.Text = supply.AgentId;
+                textBoxTime.Text = supply.Time;
             }
 
             else
             {
                 textBoxPrice.Text = "";
                 textBoxAgentid.Text = "";
+                textBoxTime.Text = "";
             }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+       }
+
+        private void textBoxTime_TextChanged(object sender, EventArgs e)
         {
 
         }
