@@ -81,6 +81,7 @@
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
           <Property Name="AgentId" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="FK_Agent_Client">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
@@ -299,6 +300,7 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AgentId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Agent" Relationship="Self.FK_Agent_Supply" FromRole="Supply" ToRole="Agent" />
         </EntityType>
         <Association Name="FK_Agent_Client">
@@ -385,7 +387,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SAMEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SAMEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Agent" EntityType="Self.Agent" />
           <EntitySet Name="Catalog" EntityType="Self.Catalog" />
           <EntitySet Name="Client" EntityType="Self.Client" />
@@ -429,7 +431,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище SAMModelContainer" CdmEntityContainer="SAMEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SAMModelContainer" CdmEntityContainer="SAMEntities3">
           <EntitySetMapping Name="Agent">
             <EntityTypeMapping TypeName="SAMModel.Agent">
               <MappingFragment StoreEntitySet="Agent">
@@ -513,6 +515,7 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -9,7 +9,7 @@ namespace SAM
 {
     static class Program
     {
-        public static SAMEntities sAM = new SAMEntities(); 
+        public static SAMEntities3 sAM = new SAMEntities3(); 
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

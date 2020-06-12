@@ -38,10 +38,10 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelList = new System.Windows.Forms.Label();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonEdit
@@ -128,6 +128,11 @@
             this.columnHeader3.Text = "Время доставки";
             this.columnHeader3.Width = 96;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Список";
+            this.columnHeader4.Width = 268;
+            // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
@@ -154,11 +159,6 @@
             this.labelList.Size = new System.Drawing.Size(44, 13);
             this.labelList.TabIndex = 9;
             this.labelList.Text = "Список";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Список";
-            this.columnHeader4.Width = 268;
             // 
             // FormDelivery
             // 

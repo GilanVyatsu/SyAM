@@ -17,6 +17,7 @@ namespace SAM
         public int id { get; set; }
         public string Price { get; set; }
         public string AgentId { get; set; }
+        public System.DateTime Time { get; set; }
     
         public virtual Agent Agent { get; set; }
     }

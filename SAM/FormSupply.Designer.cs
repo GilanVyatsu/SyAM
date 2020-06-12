@@ -39,6 +39,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +113,7 @@
             this.listViewSupply.FullRowSelect = true;
             this.listViewSupply.GridLines = true;
             this.listViewSupply.HideSelection = false;
-            this.listViewSupply.Location = new System.Drawing.Point(222, 32);
+            this.listViewSupply.Location = new System.Drawing.Point(230, 32);
             this.listViewSupply.Name = "listViewSupply";
             this.listViewSupply.Size = new System.Drawing.Size(232, 318);
             this.listViewSupply.TabIndex = 9;
@@ -135,11 +136,20 @@
             this.columnHeader3.Text = "Имя партнера";
             this.columnHeader3.Width = 158;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 148);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(176, 20);
+            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // FormSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listViewSupply);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxAgentid);
@@ -168,5 +178,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
