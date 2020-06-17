@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="94760ab823ba410f860df4c9574e9eea" Name="Diagram1">
-        <EntityTypeShape EntityType="SAMModel.Agent" Width="1.5" PointX="8" PointY="8.25" IsExpanded="true" />
+      <Diagram DiagramId="94760ab823ba410f860df4c9574e9eea" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="SAMModel.Agent" Width="1.5" PointX="9.375" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Catalog" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SAMModel.Client" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Client" Width="1.5" PointX="8" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Delivery" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Demand" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SAMModel.Login" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="SAMModel.Personal" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Login" Width="1.5" PointX="0.625" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Personal" Width="1.5" PointX="4" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SAMModel.Store" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SAMModel.Supply" Width="1.5" PointX="5.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAMModel.Supply" Width="1.5" PointX="11.25" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="SAMModel.FK_Agent_Client" ManuallyRouted="false" />
         <AssociationConnector Association="SAMModel.FK_Agent_Supply" ManuallyRouted="false" />
         <AssociationConnector Association="SAMModel.FK_Demand_Catalog" ManuallyRouted="false" />

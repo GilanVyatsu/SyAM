@@ -158,7 +158,7 @@
             this.Controls.Add(this.buttonOpenClients);
             this.Controls.Add(this.buttonOpenPersonal);
             this.Name = "SAM";
-            this.Text = "SAM";
+            this.Text = "Главное меню";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
